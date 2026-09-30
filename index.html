@@ -1,0 +1,2432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameZone | Catálogo Gamer</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        /* ==============================
+           CONFIGURACIÓN GENERAL
+        ============================== */
+
+        :root {
+            --fondo: #070b18;
+            --fondo2: #10172d;
+            --morado: #8b35ff;
+            --azul: #00d9ff;
+            --verde: #25e58a;
+            --amarillo: #ffd83d;
+            --rojo: #ff3d62;
+            --blanco: #ffffff;
+            --gris: #aeb9d3;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(139,53,255,.20), transparent 25%),
+                radial-gradient(circle at 90% 30%, rgba(0,217,255,.15), transparent 25%),
+                var(--fondo);
+            color: var(--blanco);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            font-weight: 900;
+            font-size: 2.5rem;
+        }
+
+        .section-subtitle {
+            color: var(--gris);
+        }
+
+
+        /* ==============================
+           NAVBAR
+        ============================== */
+
+        .navbar {
+            background: rgba(4, 7, 20, .95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0,217,255,.25);
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-weight: 900;
+            font-size: 1.5rem;
+        }
+
+        .navbar-brand i {
+            color: var(--azul);
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 600;
+            margin: 0 5px;
+        }
+
+        .nav-link:hover {
+            color: var(--azul) !important;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 9px 18px;
+            border-radius: 30px;
+            color: var(--verde);
+            border: 1px solid var(--verde);
+            background: rgba(37,229,138,.08);
+            font-weight: bold;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            font-weight: 900;
+            line-height: 1;
+            margin-top: 20px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                90deg,
+                var(--morado),
+                var(--azul)
+            );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            color: var(--gris);
+            font-size: 1.15rem;
+            max-width: 650px;
+            margin-top: 25px;
+        }
+
+        .btn-gamer {
+            background: linear-gradient(
+                90deg,
+                var(--morado),
+                #b44cff
+            );
+
+            color: white;
+            border: none;
+            font-weight: bold;
+            padding: 13px 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(139,53,255,.35);
+            transition: .25s;
+        }
+
+        .btn-gamer:hover {
+            transform: translateY(-3px);
+            color: white;
+            box-shadow: 0 0 35px rgba(139,53,255,.55);
+        }
+
+        .btn-outline-gamer {
+            border: 1px solid var(--azul);
+            color: var(--azul);
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 10px;
+        }
+
+        .btn-outline-gamer:hover {
+            background: var(--azul);
+            color: #001019;
+        }
+
+
+        /* ==============================
+           DIFERENCIA PRINCIPAL
+        ============================== */
+
+        .difference-box {
+            height: 100%;
+            padding: 35px;
+            border-radius: 22px;
+            background: linear-gradient(
+                145deg,
+                rgba(139,53,255,.14),
+                rgba(0,217,255,.05)
+            );
+
+            border: 1px solid rgba(139,53,255,.4);
+            box-shadow: 0 15px 40px rgba(0,0,0,.25);
+        }
+
+        .difference-box i.main-icon {
+            font-size: 3rem;
+            color: var(--azul);
+        }
+
+        .difference-box h3 {
+            font-weight: 900;
+            margin-top: 15px;
+        }
+
+        .difference-box p,
+        .difference-box li {
+            color: var(--gris);
+        }
+
+        .vs {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--fondo2);
+            border: 3px solid var(--azul);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 900;
+            color: var(--azul);
+            font-size: 1.3rem;
+            margin: auto;
+        }
+
+
+        /* ==============================
+           ACLARACIÓN
+        ============================== */
+
+        .important {
+            background: rgba(255,216,61,.08);
+            border: 1px solid var(--amarillo);
+            border-radius: 15px;
+            padding: 22px;
+            color: #fff;
+        }
+
+        .important i {
+            color: var(--amarillo);
+            font-size: 2rem;
+        }
+
+
+        /* ==============================
+           PRODUCTOS
+        ============================== */
+
+        .product-card {
+            height: 100%;
+            background: #f7f9ff;
+            color: #17203a;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            border: none;
+            box-shadow: 0 15px 35px rgba(0,0,0,.3);
+            transition: .3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow:
+                0 20px 45px rgba(0,217,255,.16);
+        }
+
+        .product-image-box {
+            background: #e8edf8;
+            padding: 15px;
+            position: relative;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 230px;
+            object-fit: contain;
+            background: white;
+            border-radius: 14px;
+        }
+
+        .new {
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            background: var(--verde);
+            color: #00351e;
+            padding: 6px 10px;
+            border-radius: 7px;
+            font-size: .75rem;
+            font-weight: 900;
+        }
+
+        .discount {
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            background: var(--rojo);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 7px;
+            font-size: .75rem;
+            font-weight: 900;
+        }
+
+        .soldout {
+            position: absolute;
+            right: 25px;
+            top: 25px;
+            background: #5b6272;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 7px;
+            font-size: .75rem;
+            font-weight: 900;
+        }
+
+        .product-body {
+            padding: 22px;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: 900;
+            min-height: 50px;
+        }
+
+        .product-description {
+            color: #65708a;
+            min-height: 45px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #9097a8;
+        }
+
+        .price {
+            color: #b52235;
+            font-size: 1.8rem;
+            font-weight: 900;
+        }
+
+        .benefit {
+            display: inline-block;
+            background: #edf1f8;
+            padding: 7px 9px;
+            border-radius: 8px;
+            font-size: .75rem;
+            font-weight: bold;
+            margin: 2px;
+            color: #39445d;
+        }
+
+        .offer {
+            background: linear-gradient(
+                90deg,
+                #ffe979,
+                #ffd13c
+            );
+
+            color: #342900;
+            text-align: center;
+            padding: 9px;
+            margin-top: 12px;
+            border-radius: 10px;
+            font-weight: 900;
+        }
+
+
+        /* ==============================
+           CTA
+        ============================== */
+
+        .cta-box {
+            padding: 40px;
+            border-radius: 25px;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(139,53,255,.2),
+                    rgba(0,217,255,.1)
+                );
+
+            border: 1px solid rgba(0,217,255,.3);
+        }
+
+
+        /* ==============================
+           BENEFICIOS
+        ============================== */
+
+        .benefit-card {
+            height: 100%;
+            padding: 28px;
+            border-radius: 20px;
+            background: rgba(16,23,45,.85);
+            border: 1px solid rgba(0,217,255,.25);
+            transition: .3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--azul);
+        }
+
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: var(--azul);
+        }
+
+        .benefit-card h4 {
+            margin-top: 18px;
+            font-weight: 900;
+        }
+
+        .benefit-card p {
+            color: var(--gris);
+        }
+
+
+        /* ==============================
+           FAQ
+        ============================== */
+
+        .faq-container {
+            background: rgba(16,23,45,.9);
+            border: 1px solid rgba(0,217,255,.3);
+            border-radius: 20px;
+            padding: 15px;
+        }
+
+        .accordion-item {
+            background: transparent;
+            border-color: rgba(255,255,255,.12);
+        }
+
+        .accordion-button {
+            background: transparent;
+            color: white;
+            font-weight: bold;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: rgba(0,217,255,.08);
+            color: var(--azul);
+            box-shadow: none;
+        }
+
+        .accordion-body {
+            color: var(--gris);
+        }
+
+        .accordion-button::after {
+            filter: invert(1);
+        }
+
+
+        /* ==============================
+           CONTACTO
+        ============================== */
+
+        .contact-card {
+            height: 100%;
+            padding: 25px;
+            background: rgba(16,23,45,.85);
+            border: 1px solid rgba(0,217,255,.25);
+            border-radius: 18px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: .25s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--azul);
+            color: white;
+        }
+
+        .contact-card i {
+            font-size: 2rem;
+            color: var(--azul);
+        }
+
+        .contact-card p {
+            color: var(--gris);
+        }
+
+
+        /* ==============================
+           FORMULARIO
+        ============================== */
+
+        .form-box {
+            background: rgba(16,23,45,.9);
+            border: 1px solid rgba(139,53,255,.4);
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .form-control,
+        .form-select {
+            background: #10182d;
+            border: 1px solid #34405c;
+            color: white;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            background: #10182d;
+            color: white;
+            border-color: var(--azul);
+            box-shadow: 0 0 0 .2rem rgba(0,217,255,.1);
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+            padding: 35px 0;
+            border-top: 1px solid rgba(255,255,255,.1);
+            color: var(--gris);
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 8px;
+            transition: .2s;
+        }
+
+        .social-icon:hover {
+            color: var(--azul);
+        }
+
+
+        /* ==============================
+           RESPONSIVE
+        ============================== */
+
+        @media(max-width: 768px) {
+
+            section {
+                padding: 65px 0;
+            }
+
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .product-image {
+                height: 190px;
+            }
+
+            .cta-box {
+                padding: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#inicio">
+            <i class="bi bi-controller"></i>
+            GameZone
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+            <i class="bi bi-list text-white fs-2"></i>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">
+                        Inicio
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#diferencia">
+                        Diferencia
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#productos">
+                        Catálogo
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#soporte">
+                        Soporte
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">
+                        Contacto
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     INICIO
+===================================================== -->
+
+<header id="inicio" class="hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+
+                <span class="hero-badge">
+                    <i class="bi bi-controller"></i>
+                    CATÁLOGO GAMER
+                </span>
+
+                <h1>
+                    Tu mundo de
+                    <span class="gradient-text">
+                        videojuegos
+                    </span>
+                </h1>
+
+                <p>
+                    Descubre accesorios, consolas, videojuegos y productos
+                    para mejorar tu experiencia gamer. Revisa los productos,
+                    precios y promociones y contáctanos directamente.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 mt-4">
+
+                    <a href="#productos"
+                       class="btn btn-gamer">
+
+                        <i class="bi bi-controller"></i>
+                        Ver productos
+
+                    </a>
+
+                    <a href="#contacto"
+                       class="btn btn-outline-gamer">
+
+                        <i class="bi bi-chat-dots"></i>
+                        Pedir información
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-5 mt-5 mt-lg-0">
+
+                <div class="difference-box text-center">
+
+                    <i class="bi bi-controller main-icon"></i>
+
+                    <h3>
+                        GAMEZONE
+                    </h3>
+
+                    <p>
+                        Todo lo que necesitas para disfrutar
+                        tus videojuegos favoritos.
+                    </p>
+
+                    <div class="row g-2 mt-4">
+
+                        <div class="col-4">
+                            <div class="bg-dark rounded-3 p-3">
+                                <i class="bi bi-pc-display"></i>
+                                <br>
+                                Gaming
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="bg-dark rounded-3 p-3">
+                                <i class="bi bi-controller"></i>
+                                <br>
+                                Consolas
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="bg-dark rounded-3 p-3">
+                                <i class="bi bi-headset"></i>
+                                <br>
+                                Accesorios
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     DIFERENCIA PRINCIPAL
+===================================================== -->
+
+<section id="diferencia">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                DIFERENCIA PRINCIPAL
+            </h2>
+
+            <p class="section-subtitle">
+                ¿Qué tipo de página estamos desarrollando?
+            </p>
+
+        </div>
+
+
+        <div class="row align-items-center g-4">
+
+            <!-- CATÁLOGO -->
+
+            <div class="col-lg-5">
+
+                <div class="difference-box">
+
+                    <div class="text-center">
+
+                        <i class="bi bi-grid-3x3-gap main-icon"></i>
+
+                        <h3>
+                            CATÁLOGO WEB
+                        </h3>
+
+                        <p>
+                            Muestra e invita a contactar
+                        </p>
+
+                    </div>
+
+                    <ul class="mt-4">
+
+                        <li class="mb-3">
+                            Muestra productos.
+                        </li>
+
+                        <li class="mb-3">
+                            Presenta precios y promociones.
+                        </li>
+
+                        <li class="mb-3">
+                            Incluye fotografías y descripciones.
+                        </li>
+
+                        <li>
+                            Permite solicitar información.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- VS -->
+
+            <div class="col-lg-2">
+
+                <div class="vs">
+                    VS
+                </div>
+
+            </div>
+
+
+            <!-- TIENDA -->
+
+            <div class="col-lg-5">
+
+                <div class="difference-box">
+
+                    <div class="text-center">
+
+                        <i class="bi bi-cart-check main-icon"></i>
+
+                        <h3>
+                            TIENDA VIRTUAL
+                        </h3>
+
+                        <p>
+                            Procesa el pago en la web
+                        </p>
+
+                    </div>
+
+                    <ul class="mt-4">
+
+                        <li class="mb-3">
+                            Tiene carrito de compras.
+                        </li>
+
+                        <li class="mb-3">
+                            Gestiona pedidos.
+                        </li>
+
+                        <li class="mb-3">
+                            Puede procesar pagos.
+                        </li>
+
+                        <li>
+                            Requiere mayor seguridad.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ACLARACIÓN IMPORTANTE
+===================================================== -->
+
+<section class="pt-0">
+
+    <div class="container">
+
+        <div class="important">
+
+            <div class="d-flex gap-3">
+
+                <i class="bi bi-shield-check"></i>
+
+                <div>
+
+                    <h4>
+                        ACLARACIÓN IMPORTANTE
+                    </h4>
+
+                    <p class="mb-0">
+
+                        Nuestro proyecto será un
+                        <strong>CATÁLOGO WEB</strong>.
+
+                        No procesará ni almacenará datos bancarios.
+                        El botón de compra dirigirá al usuario a un
+                        canal de contacto para solicitar información.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PRODUCTOS
+===================================================== -->
+
+<section id="productos">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="hero-badge">
+                10 PRODUCTOS GAMER
+            </span>
+
+            <h2 class="section-title mt-3">
+                CATÁLOGO DE VIDEOJUEGOS
+            </h2>
+
+            <p class="section-subtitle">
+                Productos seleccionados para mejorar tu experiencia gaming.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- PRODUCTO 1 -->
+
+            <div class="col-md-6 col-xl-4">
+
+                <article class="product-card">
+
+                    <div class="product-image-box">
+
+                        <span class="new">
+                            NUEVO
+                        </span>
+
+                        <span class="discount">
+                            -20%
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1592840496694-26d035b52b48?auto=format&fit=crop&w=900&q=80"
+                            class="product-image"
+                            alt="Audífonos gamer">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <h3 class="product-title">
+                            Audífonos Gamer RGB
+                        </h3>
+
+                        <p class="product-description">
+                            Audio envolvente, micrófono integrado
+                            y diseño cómodo para largas partidas.
+                        </p>
+
+                        <span class="old-price">
+                            S/ 249.00
+                        </span>
+
+                        <div class="price">
+                            S/ 199.00
+                        </div>
+
+                        <div class="mt-2">
+
+                            <span class="benefit">
+                                <i class="bi bi-mic"></i>
+                                Micrófono
+                            </span>
+
+                            <span class="benefit">
+                                <i class="bi bi-lightning"></i>
+                                RGB
+                            </span>
+
+                            <span class="benefit">
+                                <i class="bi bi-volume-up"></i>
+                                Sonido 7.1
+                            </span>
+
+                        </div>
+
+                        <div class="offer">
+                            ¡OFERTA POR TIEMPO LIMITADO!
+                        </div>
+
+                        <a
+                            href="#contacto"
+                            class="btn btn-gamer w-100 mt-3">
+
+                            Comprar ahora
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- PRODUCTO 2 -->
+
+            <div class="col-md-6 col-xl-4">
+
+                <article class="product-card">
+
+                    <div class="product-image-box">
+
+                        <span class="new">
+                            NUEVO
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1600080972464-8e5f35f63d08?auto=format&fit=crop&w=900&q=80"
+                            class="product-image"
+                            alt="Mouse gamer">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <h3 class="product-title">
+                            Mouse Gamer Pro
+                        </h3>
+
+                        <p class="product-description">
+                            Sensor de alta precisión y botones
+                            programables para gaming competitivo.
+                        </p>
+
+                        <div class="price">
+                            S/ 129.00
+                        </div>
+
+                        <div class="mt-2">
+
+                            <span class="benefit">
+                                Alta precisión
+                            </span>
+
+                            <span class="benefit">
+                                RGB
+                            </span>
+
+                            <span class="benefit">
+                                6 botones
+                            </span>
+
+                        </div>
+
+                        <div class="offer">
+                            STOCK DISPONIBLE
+                        </div>
+
+                        <a href="#contacto"
+                           class="btn btn-gamer w-100 mt-3">
+
+                            Comprar ahora
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- PRODUCTO 3 -->
+
+            <div class="col-md-6 col-xl-4">
+
+                <article class="product-card">
+
+                    <div class="product-image-box">
+
+                        <span class="discount">
+                            -15%
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=900&q=80"
+                            class="product-image"
+                            alt="Monitor gamer">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <h3 class="product-title">
+                            Monitor Gamer 24"
+                        </h3>
+
+                        <p class="product-description">
+                            Pantalla Full HD con alta frecuencia
+                            de actualización para juegos fluidos.
+                        </p>
+
+                        <span class="old-price">
+                            S/ 799.00
+                        </span>
+
+                        <div class="price">
+                            S/ 679.00
+                        </div>
+
+                        <div class="mt-2">
+
+                            <span class="benefit">
+                                Full HD
+                            </span>
+
+                            <span class="benefit">
+                                144 Hz
+                            </span>
+
+                            <span class="benefit">
+                                24 pulgadas
+                            </span>
+
+                        </div>
+
+                        <div class="offer">
+                            AHORRA S/ 120
+                        </div>
+
+                        <a href="#contacto"
+                           class="btn btn-gamer w-100 mt-3">
+
+                            Comprar ahora
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- PRODUCTO 4 -->
+
+            <div class="col-md-6 col-xl-4">
+
+                <article class="product-card">
+
+                    <div class="product-image-box">
+
+                        <span class="new">
+                            NUEVO
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1605901309584-818e25960a8f?auto=format&fit=crop&w=900&q=80"
+                            class="product-image"
+                            alt="Control gamer">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <h3 class="product-title">
+                            Control Gamer Inalámbrico
+                        </h3>
+
+                        <p class="product-description">
+                            Control ergonómico compatible con
+                            diferentes plataformas.
+                        </p>
+
+                        <div class="price">
+                            S/ 189.00
+                        </div>
+
+                        <div class="mt-2">
+
+                            <span class="benefit">
+                                Bluetooth
+                            </span>
+
+                            <span class="benefit">
+                                Ergonómico
+                            </span>
+
+                            <span class="benefit">
+                                Inalámbrico
+                            </span>
+
+                        </div>
+
+                        <div class="offer">
+                            NUEVA COLECCIÓN
+                        </div>
+
+                        <a href="#contacto"
+                           class="btn btn-gamer w-100 mt-3">
+
+                            Comprar ahora
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- PRODUCTO 5 -->
+
+            <div class="col-md-6 col-xl-4">
+
+                <article class="product-card">
+
+                    <div class="product-image-box">
+
+                        <span class="discount">
+                            -10%
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=900&q=80"
+                            class="product-image"
+                            alt="Consola de videojuegos">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <h3 class="product-title">
+                            Consola Gamer
+                        </h3>
+
+                        <p class="product-description">
+                            Consola para disfrutar tus videojuegos
+                            favoritos con gran calidad gráfica.
+                        </p>
+
+                        <span class="old-price">
+                            S/ 2,499.00
+                        </span>
+
+                        <div class="price">
+                            S/ 2,249.00
+                        </div>
+
+                        <div class="mt-2">
+
+                            <span class="benefit">
+                                Alta resolución
+                            </span>
+
+                            <span class="benefit">
+                                1 TB
+                            </span>
+
+                            <span class="benefit">
+                                HDMI
+                            </span>
+
+                        </div>
+
+                        <div class="offer">
+                            OFERTA ESPECIAL
+                        </div>
+
+                        <a href="#contacto"
+                           class="btn btn-gamer w-100 mt-3">
+
+                            Comprar ahora
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- PRODUCTO 6 -->
+
+            <div class="col-md-6 col-xl-4">
+
+                <article class="product-card">
+
+                    <div class="product-image-box">
+
+                        <span class="new">
+                            NUEVO
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?auto=format&fit=crop&w=900&q=80"
+                            class="product-image"
+                            alt="Teclado gamer">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <h3 class="product-title">
+                            Teclado Mecánico RGB
+                        </h3>
+
+                        <p class="product-description">
+                            Teclado con switches mecánicos,
+                            iluminación RGB y respuesta rápida.
+                        </p>
+
+                        <div class="price">
+                            S/ 179.00
+                        </div>
+
+                        <div class="mt-2">
+
+                            <span class="benefit">
+                                Mecánico
+                            </span>
+
+                            <span class="benefit">
+                                RGB
+                            </span>
+
+                            <span class="benefit">
+                                USB
+                            </span>
+
+                        </div>
+
+                        <div class="offer">
+                            PRODUCTO DESTACADO
+                        </div>
+
+                        <a href="#contacto"
+                           class="btn btn-gamer w-100 mt-3">
+
+                            Comprar ahora
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- PRODUCTO 7 -->
+
+            <div class="col-md-6 col-xl-4">
+
+                <article class="product-card">
+
+                    <div class="product-image-box">
+
+                        <span class="discount">
+                            -18%
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1625842268584-8f3296236761?auto=format&fit=crop&w=900&q=80"
+                            class="product-image"
+                            alt="Silla gamer">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <h3 class="product-title">
+                            Silla Gamer Pro
+                        </h3>
+
+                        <p class="product-description">
+                            Diseño ergonómico para mayor comodidad
+                            durante tus sesiones de juego.
+                        </p>
+
+                        <span class="old-price">
+                            S/ 899.00
+                        </span>
+
+                        <div class="price">
+                            S/ 739.00
+                        </div>
+
+                        <div class="mt-2">
+
+                            <span class="benefit">
+                                Ergonómica
+                            </span>
+
+                            <span class="benefit">
+                                Reclinable
+                            </span>
+
+                            <span class="benefit">
+                                Cojines
+                            </span>
+
+                        </div>
+
+                        <div class="offer">
+                            DESCUENTO GAMER
+                        </div>
+
+                        <a href="#contacto"
+                           class="btn btn-gamer w-100 mt-3">
+
+                            Comprar ahora
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- PRODUCTO 8 -->
+
+            <div class="col-md-6 col-xl-4">
+
+                <article class="product-card">
+
+                    <div class="product-image-box">
+
+                        <span class="new">
+                            NUEVO
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=80"
+                            class="product-image"
+                            alt="Consola retro">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <h3 class="product-title">
+                            Consola Retro
+                        </h3>
+
+                        <p class="product-description">
+                            Revive grandes clásicos con una
+                            colección de juegos retro.
+                        </p>
+
+                        <div class="price">
+                            S/ 299.00
+                        </div>
+
+                        <div class="mt-2">
+
+                            <span class="benefit">
+                                Retro
+                            </span>
+
+                            <span class="benefit">
+                                HDMI
+                            </span>
+
+                            <span class="benefit">
+                                Portátil
+                            </span>
+
+                        </div>
+
+                        <div class="offer">
+                            IDEAL PARA COLECCIONISTAS
+                        </div>
+
+                        <a href="#contacto"
+                           class="btn btn-gamer w-100 mt-3">
+
+                            Comprar ahora
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- PRODUCTO 9 -->
+
+            <div class="col-md-6 col-xl-4">
+
+                <article class="product-card">
+
+                    <div class="product-image-box">
+
+                        <span class="soldout">
+                            AGOTADO
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1603481546238-487240415921?auto=format&fit=crop&w=900&q=80"
+                            class="product-image"
+                            alt="Volante gamer">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <h3 class="product-title">
+                            Volante Gamer Racing
+                        </h3>
+
+                        <p class="product-description">
+                            Volante con pedales para una experiencia
+                            de carreras más inmersiva.
+                        </p>
+
+                        <div class="price">
+                            S/ 599.00
+                        </div>
+
+                        <div class="mt-2">
+
+                            <span class="benefit">
+                                Pedales
+                            </span>
+
+                            <span class="benefit">
+                                Vibración
+                            </span>
+
+                            <span class="benefit">
+                                Racing
+                            </span>
+
+                        </div>
+
+                        <div class="offer">
+                            PRÓXIMAMENTE
+                        </div>
+
+                        <a href="#contacto"
+                           class="btn btn-secondary w-100 mt-3">
+
+                            Pedir información
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- PRODUCTO 10 -->
+
+            <div class="col-md-6 col-xl-4">
+
+                <article class="product-card">
+
+                    <div class="product-image-box">
+
+                        <span class="new">
+                            NUEVO
+                        </span>
+
+                        <span class="discount">
+                            -12%
+                        </span>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?auto=format&fit=crop&w=900&q=80"
+                            class="product-image"
+                            alt="PC gamer">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <h3 class="product-title">
+                            PC Gamer Pro
+                        </h3>
+
+                        <p class="product-description">
+                            Computadora de alto rendimiento para
+                            videojuegos y aplicaciones exigentes.
+                        </p>
+
+                        <span class="old-price">
+                            S/ 4,299.00
+                        </span>
+
+                        <div class="price">
+                            S/ 3,799.00
+                        </div>
+
+                        <div class="mt-2">
+
+                            <span class="benefit">
+                                Alto rendimiento
+                            </span>
+
+                            <span class="benefit">
+                                SSD
+                            </span>
+
+                            <span class="benefit">
+                                Gaming
+                            </span>
+
+                        </div>
+
+                        <div class="offer">
+                            AHORRA S/ 500
+                        </div>
+
+                        <a href="#contacto"
+                           class="btn btn-gamer w-100 mt-3">
+
+                            Comprar ahora
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h2 class="section-title">
+                        LA CONVERSIÓN (CTA)
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        Los botones tienen llamadas a la acción
+                        claras para facilitar el contacto con el cliente.
+
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="d-grid gap-2">
+
+                        <a href="#contacto"
+                           class="btn btn-gamer">
+
+                            <i class="bi bi-cart"></i>
+                            Comprar ahora
+
+                        </a>
+
+                        <a href="#contacto"
+                           class="btn btn-outline-gamer">
+
+                            <i class="bi bi-info-circle"></i>
+                            Pedir información
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     BENEFICIOS
+===================================================== -->
+
+<section>
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                BENEFICIOS DE UN CATÁLOGO WEB EFECTIVO
+            </h2>
+
+            <p class="section-subtitle">
+                Una buena presentación facilita la comunicación
+                entre el cliente y el negocio.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="benefit-card">
+
+                    <i class="bi bi-person-plus"></i>
+
+                    <h4>
+                        Atrae clientes potenciales
+                    </h4>
+
+                    <p>
+                        Presenta los productos de manera visual,
+                        clara y atractiva.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="benefit-card">
+
+                    <i class="bi bi-shield-check"></i>
+
+                    <h4>
+                        Genera confianza
+                    </h4>
+
+                    <p>
+                        Mostrar información clara ayuda a que
+                        el visitante conozca mejor el producto.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="benefit-card">
+
+                    <i class="bi bi-chat-dots"></i>
+
+                    <h4>
+                        Facilita el contacto
+                    </h4>
+
+                    <p>
+                        El visitante puede comunicarse fácilmente
+                        para resolver sus dudas.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="benefit-card">
+
+                    <i class="bi bi-controller"></i>
+
+                    <h4>
+                        Aumenta oportunidades
+                    </h4>
+
+                    <p>
+                        Los llamados a la acción facilitan
+                        que el visitante continúe el proceso.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SOPORTE / FAQ
+===================================================== -->
+
+<section id="soporte">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-5">
+
+                <span class="hero-badge">
+                    SOPORTE
+                </span>
+
+                <h2 class="section-title mt-3">
+                    Preguntas frecuentes
+                </h2>
+
+                <p class="section-subtitle">
+
+                    La sección FAQ permite resolver dudas
+                    inmediatas antes de contactar.
+
+                </p>
+
+                <div class="mt-4">
+
+                    <p>
+                        <i class="bi bi-check-circle-fill text-success"></i>
+                        Información rápida sobre productos.
+                    </p>
+
+                    <p>
+                        <i class="bi bi-check-circle-fill text-success"></i>
+                        Respuestas a preguntas comunes.
+                    </p>
+
+                    <p>
+                        <i class="bi bi-check-circle-fill text-success"></i>
+                        Ayuda antes de realizar una consulta.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-7">
+
+                <div class="faq-container">
+
+                    <div class="accordion accordion-flush"
+                         id="faq">
+
+
+                        <div class="accordion-item">
+
+                            <h2 class="accordion-header">
+
+                                <button
+                                    class="accordion-button collapsed"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#pregunta1">
+
+                                    ¿Cuáles son los métodos de pago?
+
+                                </button>
+
+                            </h2>
+
+                            <div
+                                id="pregunta1"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#faq">
+
+                                <div class="accordion-body">
+
+                                    Este proyecto es un catálogo web,
+                                    por lo que no procesa pagos directamente.
+                                    Los detalles se coordinan mediante contacto.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="accordion-item">
+
+                            <h2 class="accordion-header">
+
+                                <button
+                                    class="accordion-button collapsed"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#pregunta2">
+
+                                    ¿Hacen envíos a todo el Perú?
+
+                                </button>
+
+                            </h2>
+
+                            <div
+                                id="pregunta2"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#faq">
+
+                                <div class="accordion-body">
+
+                                    La disponibilidad y cobertura del envío
+                                    se confirma al momento de realizar
+                                    la consulta.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="accordion-item">
+
+                            <h2 class="accordion-header">
+
+                                <button
+                                    class="accordion-button collapsed"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#pregunta3">
+
+                                    ¿Cuánto tiempo tarda el envío?
+
+                                </button>
+
+                            </h2>
+
+                            <div
+                                id="pregunta3"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#faq">
+
+                                <div class="accordion-body">
+
+                                    El tiempo depende de la ciudad,
+                                    disponibilidad y producto seleccionado.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="accordion-item">
+
+                            <h2 class="accordion-header">
+
+                                <button
+                                    class="accordion-button collapsed"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#pregunta4">
+
+                                    ¿Puedo cambiar o devolver el producto?
+
+                                </button>
+
+                            </h2>
+
+                            <div
+                                id="pregunta4"
+                                class="accordion-collapse collapse"
+                                data-bs-parent="#faq">
+
+                                <div class="accordion-body">
+
+                                    Las condiciones de cambio o devolución
+                                    deben consultarse antes de confirmar
+                                    el pedido.
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACTO
+===================================================== -->
+
+<section id="contacto">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                CONTACTO
+            </h2>
+
+            <p class="section-subtitle">
+
+                Elige una opción para comunicarte
+                con nosotros.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- WHATSAPP -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <a
+                    href="https://wa.me/51999999999"
+                    target="_blank"
+                    class="contact-card">
+
+                    <i class="bi bi-whatsapp"></i>
+
+                    <h4 class="mt-3">
+                        WhatsApp
+                    </h4>
+
+                    <p>
+                        Conversación inmediata.
+                    </p>
+
+                </a>
+
+            </div>
+
+
+            <!-- CORREO -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <a
+                    href="mailto:contacto@gamezone.com"
+                    class="contact-card">
+
+                    <i class="bi bi-envelope"></i>
+
+                    <h4 class="mt-3">
+                        Correo electrónico
+                    </h4>
+
+                    <p>
+                        Realiza tu consulta por email.
+                    </p>
+
+                </a>
+
+            </div>
+
+
+            <!-- FORMULARIO -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <a
+                    href="#formulario"
+                    class="contact-card">
+
+                    <i class="bi bi-ui-checks"></i>
+
+                    <h4 class="mt-3">
+                        Formulario
+                    </h4>
+
+                    <p>
+                        Envía una solicitud de información.
+                    </p>
+
+                </a>
+
+            </div>
+
+
+            <!-- REDES -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <a
+                    href="#redes"
+                    class="contact-card">
+
+                    <i class="bi bi-share"></i>
+
+                    <h4 class="mt-3">
+                        Redes sociales
+                    </h4>
+
+                    <p>
+                        Conoce más sobre GameZone.
+                    </p>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORMULARIO -->
+
+        <div class="row justify-content-center mt-5"
+             id="formulario">
+
+            <div class="col-lg-8">
+
+                <div class="form-box">
+
+                    <h3>
+                        Formulario de pedido de información
+                    </h3>
+
+                    <p class="section-subtitle">
+
+                        Completa los datos para realizar
+                        una consulta sobre un producto.
+
+                    </p>
+
+
+                    <form id="formularioContacto">
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+                                    Nombre
+                                </label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    required>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label class="form-label">
+                                    Correo electrónico
+                                </label>
+
+                                <input
+                                    type="email"
+                                    class="form-control"
+                                    required>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <label class="form-label">
+                                    Producto de interés
+                                </label>
+
+                                <select
+                                    class="form-select"
+                                    required>
+
+                                    <option value="">
+                                        Selecciona un producto
+                                    </option>
+
+                                    <option>
+                                        Audífonos Gamer RGB
+                                    </option>
+
+                                    <option>
+                                        Mouse Gamer Pro
+                                    </option>
+
+                                    <option>
+                                        Monitor Gamer 24"
+                                    </option>
+
+                                    <option>
+                                        Control Gamer Inalámbrico
+                                    </option>
+
+                                    <option>
+                                        Consola Gamer
+                                    </option>
+
+                                    <option>
+                                        Teclado Mecánico RGB
+                                    </option>
+
+                                    <option>
+                                        Silla Gamer Pro
+                                    </option>
+
+                                    <option>
+                                        Consola Retro
+                                    </option>
+
+                                    <option>
+                                        Volante Gamer Racing
+                                    </option>
+
+                                    <option>
+                                        PC Gamer Pro
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <label class="form-label">
+                                    Mensaje
+                                </label>
+
+                                <textarea
+                                    class="form-control"
+                                    rows="5"
+                                    placeholder="Escribe tu consulta..."
+                                    required></textarea>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-gamer">
+
+                                    <i class="bi bi-send"></i>
+
+                                    Enviar solicitud
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+
+                    <div
+                        id="mensajeExito"
+                        class="alert alert-success mt-4 d-none">
+
+                        ¡Solicitud enviada correctamente!
+                        Este formulario es demostrativo y
+                        no procesa pagos.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     REDES SOCIALES
+===================================================== -->
+
+<section id="redes" class="pt-0">
+
+    <div class="container text-center">
+
+        <h3>
+            Síguenos en nuestras redes
+        </h3>
+
+        <div class="mt-3">
+
+            <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                class="social-icon">
+
+                <i class="bi bi-instagram"></i>
+
+            </a>
+
+            <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="social-icon">
+
+                <i class="bi bi-facebook"></i>
+
+            </a>
+
+            <a
+                href="https://www.tiktok.com/"
+                target="_blank"
+                class="social-icon">
+
+                <i class="bi bi-tiktok"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container text-center">
+
+        <h4 class="text-white">
+            <i class="bi bi-controller"></i>
+            GameZone
+        </h4>
+
+        <p>
+            Catálogo web de productos para videojuegos.
+        </p>
+
+        <small>
+            Proyecto educativo. No procesa ni almacena
+            información bancaria.
+        </small>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- JavaScript -->
+
+<script>
+
+    document
+        .getElementById("formularioContacto")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            document
+                .getElementById("mensajeExito")
+                .classList.remove("d-none");
+
+            this.reset();
+
+        });
+
+</script>
+
+
+</body>
+</html>
